@@ -195,7 +195,7 @@
     position: absolute;
     box-sizing: border-box;
     background-color: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     border-radius: 2px;
     left: 19px;
     top: 24px;
@@ -204,7 +204,6 @@
 }
 
 .feedback form input[type="checkbox"]:checked + label {
-
   &::before {
     background-image: url("../img/svg/check-mark.svg");
     background-size: 11px 5px;
@@ -216,4 +215,3 @@
 .feedback form input[type="checkbox"]:focus + label {
   color: $color-font-default-black;
 }
-
