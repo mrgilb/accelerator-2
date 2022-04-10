@@ -1,0 +1,42 @@
+.socials {
+  display: flex;
+  flex-direction: column;
+  min-height: 131px;
+  justify-content: space-between;
+}
+
+.socials--margin-right {
+  margin-right: 162px;
+}
+
+.socials__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-self: flex-start;
+  margin-left: 10px;
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.socials__link {
+  &:focus {
+    outline: none;
+  }
+}
+
+.socials__link:hover svg {
+  fill: $color-default-skyblue;
+}
+
+.socials__link:focus svg {
+  fill: $color-default-skyblue;
+}
+
+.socials__list svg {
+  fill: #f8fdff;
+  width: 40px;
+  height: 40px;
+}

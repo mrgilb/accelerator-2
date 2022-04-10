@@ -1,0 +1,18 @@
+.page-header {
+  padding: 27px 0 35px;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  // position: sticky;
+  // top: 0;
+}
+
+.page-header--wrapper {
+  max-width: 1262px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 152px;
+}

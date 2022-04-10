@@ -1,0 +1,70 @@
+.about {
+  max-width: 1262px;
+  padding: 0 20px;
+  padding-left: 269px;
+  width: 100%;
+  min-height: 421px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 88px;
+  background-image: url("../img/about-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+}
+
+.about h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: $roboto400;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  text-align: left;
+}
+
+.about p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  display: block;
+  margin-bottom: 19px;
+}
+
+
+.about .about__additional-text {
+  display: none;
+}
+
+.about button {
+  font-family: $roboto700;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: $color-default-skyblue;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $color-default-skyblue;
+  border-radius: 3px;
+  padding: 14px 51px;
+  box-sizing: border-box;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: $color-default-skyblue;
+    border: 1px solid $color-font-default-white;
+    color: $color-font-default-white;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-default-skyblue;
+    border: 1px solid $color-font-default-white;
+    color: $color-font-default-white;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,121 @@
+.promo {
+  padding: 65px 20px 140px;
+  background-color: $color-default-black;
+  min-height: 400px;
+}
+
+.promo h2 {
+  font-family: $roboto400;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  text-align: left;
+  color: #ffffff;
+  margin: 0 auto;
+  display: block;
+  max-width: 1222px;
+}
+
+.promo__list {
+  padding: 0;
+  list-style: none;
+  max-width: 1222px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.promo__list li {
+  position: relative;
+  width: 28.6%;
+  min-height: 654px;
+}
+
+.promo__item-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.promo__item-bg-first {
+  background-image: url("../img/item-card-bg-fisrt.png");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/item-card-bg-fisrt@2x.png");
+  }
+}
+
+.promo__item-bg-second {
+  background-image: url("../img/item-card-bg-second.png");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/item-card-bg-second@2x.png");
+  }
+}
+
+.promo__item-bg-third {
+  background-image: url("../img/item-card-bg-third.png");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/item-card-bg-third@2x.png");
+  }
+}
+
+.promo__list a {
+  padding: 50px 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-family: $roboto400;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff;
+
+  &:focus {
+    outline: none;
+    color: $color-default-skyblue;
+  }
+
+  &:hover  {
+    color: $color-default-skyblue;
+    outline: none;
+  }
+
+
+  &:hover .promo__list-arrow {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  &:focus .promo__list-arrow {
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.promo__list span {
+  max-width: 151px;
+  display: block;
+}
+
+.promo__list .promo__list-arrow {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  right: 0;
+  background-color: $color-default-skyblue;
+  border-radius: 3px 0 0 0;
+  background-image: url("../img/svg/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5px 10px;
+}

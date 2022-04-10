@@ -1,0 +1,88 @@
+.advantages {
+  max-width: 1262px;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 121px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advantages__list li {
+  width: 48.5%;
+  padding: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ebebeb;
+  border-left: 5px solid $color-default-skyblue;
+  margin-bottom: 30px;
+  min-height: 300px;
+
+  &:hover {
+    background-color: $color-default-skyblue;
+    border: 1px solid $color-default-skyblue;
+    border-left: 5px solid $color-default-skyblue;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-default-skyblue;
+    border: 1px solid $color-default-skyblue;
+    border-left: 5px solid $color-default-skyblue;
+  }
+
+  &:hover svg {
+    fill: #f2f5f6;
+  }
+
+  &:focus svg {
+    fill: #f2f5f6;
+  }
+
+  &:hover h3 {
+    color: #f2f5f6;
+  }
+
+  &:focus h3 {
+    color: #f2f5f6;
+  }
+
+  &:hover p {
+    color: #f2f5f6;
+  }
+
+  &:focus p {
+    color: #f2f5f6;
+  }
+}
+
+.advantages__list svg {
+  fill: $color-default-skyblue;
+  margin-bottom: 15px;
+}
+
+.advantages__list h3 {
+  margin: 0;
+  font-family: $roboto400;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  color: $color-default-skyblue;
+  margin-bottom: 13px;
+}
+
+.advantages__list p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}

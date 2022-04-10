@@ -1,0 +1,219 @@
+.feedback {
+  min-height: 840px;
+  background-color: $color-default-skyblue;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    width: 48%;
+    height: 252%;
+    background-color: #041827;
+    opacity: 0.5;
+    position: absolute;
+    top: -1231px;
+    left: 0;
+    transform: rotate(49deg);
+  }
+
+  &::before {
+    content: "";
+    width: 510px;
+    min-height: 285px;
+    background-image: url("../img/airplane-desktop.png");
+    background-repeat: no-repeat;
+    position: static;
+    z-index: 1;
+    margin-right: 107px;
+    margin-top: 244px;
+  }
+}
+
+.feedback form {
+  width: 30.4%;
+  margin-top: 165px;
+  padding-left: 4px;
+  box-sizing: border-box;
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 30px;
+  align-items: flex-start;
+}
+
+.feedback form h3 {
+  margin: 0;
+  font-family: $roboto400;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  text-align: left;
+  color: #ffffff;
+  width: 100%;
+}
+
+.feedback form p {
+  margin: 0;
+  margin-top: 14px;
+  margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #ffffff;
+  width: 100%;
+}
+
+.feedback form input {
+  margin-bottom: 23px;
+
+  &:hover {
+    outline: 1px solid $color-default-darkgrey;
+  }
+
+  &:focus {
+    outline: 1px solid $color-default-darkgrey;
+  }
+}
+
+.feedback form input[type="text"] {
+  min-width: 274px;
+  width: 47%;
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: none;
+}
+
+.feedback form input[type="tel"] {
+  min-width: 274px;
+  width: 47%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: none;
+}
+
+.feedback form input[type="text"]::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.feedback form input[type="tel"]::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.feedback form textarea {
+  min-width: 100%;
+  max-height: 155px;
+  padding: 25px 15px;
+  box-sizing: border-box;
+  background-color: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: none;
+  resize: none;
+  margin-bottom: 33px;
+
+  &:hover {
+    outline: 1px solid $color-default-darkgrey;
+  }
+
+  &:focus {
+    outline: 1px solid $color-default-darkgrey;
+  }
+}
+
+.feedback form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.feedback form button {
+  padding: 15px 70px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  font-family: $roboto700;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $color-font-default-black;
+
+  &:hover {
+    color: $color-font-default-black;
+    background-color: #ffffff;
+  }
+
+  &:focus {
+    outline: none;
+    color: $color-font-default-black;
+    background-color: #ffffff;
+  }
+}
+
+.feedback form input[type="checkbox"] + label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: #ffffff;
+  display: block;
+  padding-top: 16px;
+  padding-left: 45px;
+  position: relative;
+
+  &:hover {
+    color: $color-font-default-black;
+  }
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    left: 19px;
+    top: 24px;
+    z-index: 2;
+  }
+}
+
+.feedback form input[type="checkbox"]:checked + label {
+
+  &::before {
+    background-image: url("../img/svg/check-mark.svg");
+    background-size: 11px 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.feedback form input[type="checkbox"]:focus + label {
+  color: $color-font-default-black;
+}
+

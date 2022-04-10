@@ -1,0 +1,26 @@
+// Colors
+// ---------------------------------
+
+$color-font-default-white:rgba(255, 255, 255, 0.7);
+$color-font-default-grey:#f2f5f7;
+$color-font-default-black:#041827;
+$color-default-black:#041827;
+$color-default-skyblue: #00b3ff;
+$color-default-darkgrey: rgba(4, 24, 39, 0.5);
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            319px;
+$vp-768:                            767px;
+$vp-1024:                           1023px;
+
+//Fonts
+
+$roboto700: "Roboto Condensed Bold", "Arial", sans-serif;
+$roboto400: "Roboto Condensed Regular", "Arial", sans-serif;
+
+// Retina
+// ---------------------------------
+
+$retina-dppx: 2dppx;

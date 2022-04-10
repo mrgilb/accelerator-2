@@ -1,0 +1,72 @@
+.intro {
+  box-sizing: border-box;
+  min-height: 578px;
+}
+
+.intro--wrapper {
+  max-width: 1262px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  padding-left: 146px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 185px;
+}
+
+.intro h2 {
+  margin: 0;
+  font-family: $roboto700;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 94px;
+  text-align: left;
+  letter-spacing: 0.07em;
+  color: #f2f5f6;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.intro p {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  color: #f2f5f6;
+  width: 63%;
+  margin-bottom: 47px;
+}
+
+.intro a {
+  padding: 15px 25px;
+  font-family: $roboto700;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-font-default-grey;
+  background-color: $color-default-skyblue;
+  align-self: flex-start;
+
+  &:hover {
+    color: $color-default-skyblue;
+    background-color: $color-font-default-grey;
+  }
+
+  &:focus {
+    color: $color-default-skyblue;
+    background-color: $color-font-default-grey;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-default-skyblue;
+    background-color: $color-font-default-grey;
+  }
+}

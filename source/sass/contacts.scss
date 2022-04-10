@@ -1,0 +1,63 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 82px;
+  width: 67%;
+  max-width: 793px;
+}
+
+.contacts a {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $color-font-default-grey;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  display: flex;
+  gap: 17px;
+
+  &:hover {
+    color: $color-default-skyblue;
+  }
+
+  &:focus {
+    color: $color-default-skyblue;
+    outline: none;
+  }
+
+  &:hover svg {
+    fill: $color-font-default-grey;
+  }
+
+  &:focus svg {
+    fill: $color-font-default-grey;
+  }
+}
+
+.contacts svg {
+  fill: $color-default-skyblue;
+}
+
+.contacts__callback {
+  margin-left: auto;
+  font-family: $roboto400;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $color-font-default-grey;
+  border-radius: 3px;
+
+  &:hover {
+    border: 1px solid $color-default-skyblue;
+  }
+
+  &:focus {
+    border: 1px solid $color-default-skyblue;
+  }
+}

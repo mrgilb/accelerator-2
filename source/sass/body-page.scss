@@ -1,0 +1,23 @@
+.body-page {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $color-default-black;
+
+  &::after {
+    content: "";
+    width: 100%;
+    min-height: 880px;
+    z-index: -1;
+    background-image: url("../img/header-bg-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+  }
+}
+
+.body-page--hidden-overflow {
+  overflow: hidden;
+}
