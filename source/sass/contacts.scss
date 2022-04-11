@@ -6,6 +6,11 @@
   column-gap: 82px;
   width: 67%;
   max-width: 793px;
+
+  @media (max-width: $vp-1024) {
+    align-items: flex-start;
+    column-gap: 0;
+  }
 }
 
 .contacts a {
@@ -36,18 +41,39 @@
   &:focus svg {
     fill: $color-font-default-grey;
   }
+
+  @media (max-width: $vp-1024) {
+    margin-right: 13px;
+  }
 }
 
 .contacts svg {
   fill: $color-default-skyblue;
 }
 
-.contacts__callback {
+.contacts__link-text {
+  @media (max-width: $vp-1024) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.contacts .contacts__callback {
   margin-left: auto;
+  padding: 10px 16px;
   font-family: $roboto400;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   border: 1px solid $color-font-default-grey;
@@ -59,5 +85,9 @@
 
   &:focus {
     border: 1px solid $color-default-skyblue;
+  }
+
+  @media (max-width: $vp-1024) {
+    display: none;
   }
 }

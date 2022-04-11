@@ -3,10 +3,20 @@
   flex-direction: column;
   min-height: 131px;
   justify-content: space-between;
+
+  @media (max-width: $vp-1024) {
+    flex-direction: row;
+    width: 100%;
+    min-height: auto;
+  }
 }
 
 .socials--margin-right {
   margin-right: 162px;
+
+  @media (max-width: $vp-1024) {
+    margin-right: 0;
+  }
 }
 
 .socials__list {
@@ -19,6 +29,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $vp-1024) {
+    margin-top: 6px;
+    margin-left: 0;
+    margin-right: -4px;
+  }
 }
 
 .socials__link {

@@ -8,13 +8,29 @@
   &::after {
     content: "";
     width: 100%;
-    min-height: 880px;
     z-index: -1;
-    background-image: url("../img/header-bg-desktop.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+
+    @media (min-width: 768px) and (max-width: $vp-1024) {
+      min-height: 640px;
+      background-image: url("../img/header-bg-tablet.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/header-bg-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: 1024px) {
+      min-height: 880px;
+      background-image: url("../img/header-bg-desktop.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/header-bg-desktop@2x.png");
+      }
+    }
   }
 }
 

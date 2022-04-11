@@ -4,11 +4,22 @@
   padding-bottom: 55px;
   padding-top: 49px;
   box-sizing: border-box;
+
+  @media (max-width: $vp-1024) {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 49px;
+  }
 }
 
 .page-footer--wrapper {
   max-width: 1222px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
+
+  @media (max-width: $vp-1024) {
+    justify-content: space-between;
+  }
 }

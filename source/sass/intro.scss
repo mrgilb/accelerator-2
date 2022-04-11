@@ -1,6 +1,10 @@
 .intro {
   box-sizing: border-box;
   min-height: 578px;
+
+  @media (max-width: $vp-1024) {
+    min-height: 461px;
+  }
 }
 
 .intro--wrapper {
@@ -14,6 +18,11 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 185px;
+
+  @media (max-width: $vp-1024) {
+    padding: 0 50px;
+    margin-top: 79px;
+  }
 }
 
 .intro h2 {
@@ -27,6 +36,15 @@
   color: #f2f5f6;
   text-transform: uppercase;
   margin-bottom: 36px;
+
+  @media (max-width: $vp-1024) {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    margin-bottom: 1px;
+  }
 }
 
 .intro p {
@@ -38,6 +56,15 @@
   color: #f2f5f6;
   width: 63%;
   margin-bottom: 47px;
+
+  @media (max-width: $vp-1024) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 59px;
+  }
 }
 
 .intro a {
@@ -68,5 +95,9 @@
   &:active {
     color: $color-default-skyblue;
     background-color: $color-font-default-grey;
+  }
+
+  @media (max-width: $vp-1024) {
+    margin-left: 47px;
   }
 }

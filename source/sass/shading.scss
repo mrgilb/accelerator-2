@@ -1,0 +1,12 @@
+.shading {
+  display: none;
+}
+
+.shading--active {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #03101b;
+  opacity: 0.7;
+}
