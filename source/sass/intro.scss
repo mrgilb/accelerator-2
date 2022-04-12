@@ -142,13 +142,13 @@
 }
 
 .intro__button-tablet {
-  @media(max-width: $vp-768) {
+  @media (max-width: $vp-768) {
     display: none;
   }
 }
 
 .intro__button-mobile {
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
