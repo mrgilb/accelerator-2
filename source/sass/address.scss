@@ -64,6 +64,10 @@
 
   @media (max-width: $vp-1024) {
     margin-right: 0;
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
   }
 
   @media (max-width: $vp-768) {

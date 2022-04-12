@@ -39,13 +39,12 @@
   justify-content: space-between;
 
   @media (max-width: $vp-1024) {
-    margin-top: 6px;
-    margin-left: 0;
     margin-right: -4px;
   }
 
   @media (max-width: $vp-768) {
     align-self: center;
+    margin-left: 0;
   }
 }
 

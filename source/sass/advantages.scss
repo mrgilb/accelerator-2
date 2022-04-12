@@ -77,7 +77,9 @@
   }
 
   @media (max-width: $vp-1024) {
-    padding: 35px 40px;
+    padding: 39px 40px 25px;
+    min-height: 360px;
+    width: 47.9%;
   }
 
   @media (max-width: $vp-768) {
@@ -103,6 +105,12 @@
     width: 30px;
     height: 30px;
     margin-bottom: 14px;
+  }
+}
+
+.advantages__list .advantages__svg {
+  @media (min-width: 321px) and (max-width: $vp-1024) {
+    margin-bottom: 5px;
   }
 }
 

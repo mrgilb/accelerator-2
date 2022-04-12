@@ -3,8 +3,8 @@
   background-color: $color-default-skyblue;
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   &::after {
     content: "";
@@ -30,8 +30,9 @@
     background-repeat: no-repeat;
     position: static;
     z-index: 1;
-    margin-right: 107px;
-    margin-top: 244px;
+    margin-top: 245px;
+    justify-self: end;
+    margin-right: 100px;
 
     @media (max-width: $vp-1024) {
       display: none;
@@ -40,7 +41,8 @@
 
   @media (max-width: $vp-1024) {
     padding: 0 50px;
-    min-height: 580px;
+    min-height: 582px;
+    display: block;
   }
 
   @media (max-width: $vp-768) {
@@ -50,9 +52,9 @@
 }
 
 .feedback form {
-  width: 30.4%;
+  width: 63%;
   margin-top: 165px;
-  padding-left: 4px;
+  padding-left: 20px;
   box-sizing: border-box;
   align-self: flex-start;
   display: flex;
@@ -122,13 +124,17 @@
     outline: 1px solid $color-default-darkgrey;
   }
 
+  @media (max-width: $vp-1024) {
+    margin-bottom: 20px;
+  }
+
   @media (max-width: $vp-768) {
     margin-bottom: 21px;
   }
 }
 
 .feedback form input[type="text"] {
-  min-width: 274px;
+  min-width: 240px;
   width: 47%;
   max-width: 100%;
   display: block;
@@ -140,16 +146,18 @@
 
   @media (max-width: $vp-1024) {
     width: 47.5%;
+    padding: 17px;
   }
 
   @media (max-width: $vp-768) {
     min-width: auto;
     width: 100%;
+    padding: 15px;
   }
 }
 
 .feedback form input[type="tel"] {
-  min-width: 274px;
+  min-width: 240px;
   width: 47%;
   max-width: 100%;
   box-sizing: border-box;
@@ -160,11 +168,13 @@
 
   @media (max-width: $vp-1024) {
     width: 47.5%;
+    padding: 17px;
   }
 
   @media (max-width: $vp-768) {
     min-width: auto;
     width: 100%;
+    padding: 15px;
   }
 }
 
@@ -185,7 +195,7 @@
 }
 
 .feedback form textarea {
-  min-width: 100%;
+  min-width: 99%;
   max-height: 155px;
   padding: 25px 15px;
   box-sizing: border-box;
@@ -204,12 +214,15 @@
   }
 
   @media (max-width: $vp-1024) {
-    margin-bottom: 32px;
+    margin-bottom: 34px;
+    padding-top: 29px;
+    min-width: 100%;
   }
 
   @media (max-width: $vp-768) {
     min-height: 180px;
     margin-bottom: 30px;
+    padding-top: 23px;
   }
 }
 
@@ -245,6 +258,10 @@
     outline: none;
     color: $color-font-default-black;
     background-color: #ffffff;
+  }
+
+  @media (max-width: $vp-1024) {
+    padding: 13px 70px;
   }
 
   @media (max-width: $vp-768) {

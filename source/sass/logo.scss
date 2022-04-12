@@ -11,6 +11,10 @@
 }
 
 .logo__img--footer {
+  @media (max-width: $vp-1024) {
+    margin-top: -4px;
+  }
+
   @media (max-width: $vp-768) {
     margin-top: -6px;
   }
@@ -21,5 +25,15 @@
 
   @media (max-width: $vp-768) {
     display: none;
+  }
+}
+
+.logo .logo__text--footer {
+  @media (max-width: $vp-1024) {
+    margin-top: 0;
+  }
+
+  @media (max-width: $vp-768) {
+    display: block;
   }
 }
