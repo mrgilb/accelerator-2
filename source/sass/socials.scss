@@ -49,6 +49,7 @@
 }
 
 .socials__link {
+  transition: all 500ms ease;
   &:focus {
     outline: none;
   }
@@ -56,10 +57,12 @@
 
 .socials__link:hover svg {
   fill: $color-default-skyblue;
+  transition: all 500ms ease;
 }
 
 .socials__link:focus svg {
   fill: $color-default-skyblue;
+  transition: all 500ms ease;
 }
 
 .socials__list svg {

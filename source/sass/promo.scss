@@ -179,6 +179,7 @@
   text-align: left;
   text-decoration: none;
   color: #ffffff;
+  transition: all 500ms ease;
 
   &:focus {
     outline: none;
@@ -195,12 +196,14 @@
     border-radius: 0;
     width: 100%;
     max-width: 100%;
+    transition: all 500ms ease;
   }
 
   &:focus .promo__list-arrow {
     border-radius: 0;
     width: 100%;
     max-width: 100%;
+    transition: all 500ms ease;
   }
 
   @media (max-width: $vp-1024) {

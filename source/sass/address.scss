@@ -85,6 +85,7 @@
   color: $color-font-default-white;
   text-decoration: none;
   font-style: normal;
+  transition: all 500ms ease;
 
   &:hover {
     color: $color-default-skyblue;

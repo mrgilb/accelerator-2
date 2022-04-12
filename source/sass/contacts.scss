@@ -29,6 +29,7 @@
   text-align: center;
   display: flex;
   gap: 17px;
+  transition: all 500ms ease;
 
   &:hover {
     color: $color-default-skyblue;
@@ -60,6 +61,7 @@
 
 .contacts svg {
   fill: $color-default-skyblue;
+  transition: all 500ms ease;
 }
 
 .contacts__link-text {

@@ -38,6 +38,7 @@
   border-left: 5px solid $color-default-skyblue;
   margin-bottom: 30px;
   min-height: 300px;
+  transition: all 500ms ease;
 
   &:hover {
     background-color: $color-default-skyblue;

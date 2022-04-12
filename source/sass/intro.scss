@@ -105,6 +105,7 @@
   color: $color-font-default-grey;
   background-color: $color-default-skyblue;
   align-self: flex-start;
+  transition: all 500ms ease;
 
   &:hover {
     color: $color-default-skyblue;
