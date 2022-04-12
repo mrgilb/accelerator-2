@@ -11,6 +11,11 @@
     align-items: flex-start;
     column-gap: 0;
   }
+
+  @media (max-width: $vp-768) {
+    width: 60%;
+    align-self: center;
+  }
 }
 
 .contacts a {
@@ -44,6 +49,12 @@
 
   @media (max-width: $vp-1024) {
     margin-right: 13px;
+  }
+
+  @media (max-width: $vp-768) {
+    padding: 10px 10px;
+    padding-top: 5px;
+    margin-right: 16px;
   }
 }
 

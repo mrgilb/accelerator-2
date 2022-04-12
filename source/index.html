@@ -19,7 +19,7 @@
   <header class="page-header">
     <div class="page-header--wrapper">
       <a class="logo">
-        <img src="./img/svg/logo-image.svg" width="55" height="55" alt="logo">
+        <img class="logo__img" src="./img/svg/logo-image.svg" width="55" height="55" alt="logo">
         <img class="logo__text" src="./img/svg/logo-text.svg" width="145" height="45" alt="Smart Device умные технологии">
       </a>
       <div class="contacts">
@@ -47,7 +47,10 @@
       <div class="intro--wrapper">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#">Получить бесплатную консультацию</a>
+        <a href="#">
+          <span class="intro__button-tablet">Получить бесплатную консультацию</span>
+          <span class="intro__button-mobile">бесплатная консультация</span>
+        </a>
       </div>
     </section>
     <section class="advantages">
@@ -97,31 +100,35 @@
     <section class="about">
       <div class="about--wrapper">
         <h2>О компании</h2>
-        <p>
+        <p class="about__text">
           Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
           технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
-        </p>
-        <p>
+          <span></span>
           Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-          Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях
-          Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
-          Среди наших клиентов крупнейшие Производители светотехники России.
-        </p>
-        <p class="about__additional-text">
-          Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
-          1&nbsp;000&nbsp;000&nbsp;клиентов,
-          70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более
-          14&nbsp;офисов
-          по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
-          Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции,
-          производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время
-          наших клиентов.
+          <span class="about__text-additional-mobile">
+            Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях
+            Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
+            Среди наших клиентов крупнейшие Производители светотехники России.
+            <span class="about__text-additional-tablet">
+              Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+              1&nbsp;000&nbsp;000&nbsp;клиентов,
+              70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более
+              14&nbsp;офисов
+              по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции,
+              производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время
+              наших клиентов.
+            </span>
+          </span>
         </p>
         <button>Подробнее</button>
       </div>
     </section>
     <section class="promo">
-      <h2>Smart Device предлагает следующие товары и услуги</h2>
+      <h2>
+        <span class="promo__title-tablet">Smart Device предлагает следующие товары и услуги</span>
+        <span class="promo__title-mobile">Товары и услуги Smart Device</span>
+      </h2>
       <ul class="promo__list">
         <li class="promo__item-bg promo__item-bg-first">
           <a href="catalog.html">
@@ -162,8 +169,8 @@
     <div class="page-footer--wrapper">
       <div class="socials socials--margin-right">
         <a class="logo">
-          <img src="./img/svg/logo-image.svg" width="55" height="55" alt="logo">
-          <img class="logo__text" src="./img/svg/logo-text.svg" width="145" height="45" alt="Smart Device умные технологии">
+          <img class="logo__img--footer" src="./img/svg/logo-image.svg" width="55" height="55" alt="logo">
+          <img src="./img/svg/logo-text.svg" width="145" height="45" alt="Smart Device умные технологии">
         </a>
         <ul class="socials__list">
           <li>
@@ -191,7 +198,7 @@
       </div>
       <nav class="main-nav main-nav--margin-right">
         <h3>Разделы сайта</h3>
-        <ul>
+        <ul class="main-nav__list">
           <li>
             <a href="">О Компаниии</a>
           </li>
@@ -214,6 +221,9 @@
             <a href="">Контакты</a>
           </li>
         </ul>
+        <button class="plus-button">
+          <span class="plus-button__plus-minus"></span>
+        </button>
       </nav>
       <address class="address">
         <p class="address__title">Наш офис</p>
@@ -231,6 +241,9 @@
             <a href="tel:+79253647813">+7 (925) 364-78-13</a>
           </li>
         </ul>
+        <button class="plus-button">
+          <span class="plus-button__plus-minus"></span>
+        </button>
       </address>
     </div>
   </footer>

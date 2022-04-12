@@ -10,6 +10,10 @@
     padding-top: 55px;
     padding-bottom: 45px;
   }
+
+  @media (max-width: $vp-768) {
+    padding: 47px 25px 56px;
+  }
 }
 
 .promo h2 {
@@ -22,6 +26,27 @@
   margin: 0 auto;
   display: block;
   max-width: 1222px;
+
+  @media (max-width: $vp-768) {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 39px;
+    text-align: left;
+    max-width: 200px;
+    margin: 0;
+  }
+}
+
+.promo .promo__title-tablet {
+  @media (max-width: $vp-768) {
+    display: none;
+  }
+}
+
+.promo .promo__title-mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .promo__list {
@@ -37,6 +62,10 @@
   @media (max-width: $vp-1024) {
     flex-direction: column;
     margin-top: 38px;
+  }
+
+  @media (max-width: $vp-768) {
+    margin-top: 29px;
   }
 }
 
@@ -60,6 +89,14 @@
 }
 
 .promo__item-bg-first {
+  @media (min-width: 0) and (max-width: $vp-768) {
+    background-image: url("../img/item-card-bg-fisrt-mobile.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/item-card-bg-fisrt-mobile@2x.png");
+    }
+  }
+
   @media (min-width: 768px) and (max-width: $vp-1024) {
     background-image: url("../img/item-card-bg-fisrt-tablet.png");
 
@@ -78,6 +115,14 @@
 }
 
 .promo__item-bg-second {
+  @media (min-width: 0) and (max-width: $vp-768) {
+    background-image: url("../img/item-card-bg-second-mobile.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/item-card-bg-second-mobile@2x.png");
+    }
+  }
+
   @media (min-width: 768px) and (max-width: $vp-1024) {
     background-image: url("../img/item-card-bg-second-tablet.png");
 
@@ -96,6 +141,14 @@
 }
 
 .promo__item-bg-third {
+  @media (min-width: 0) and (max-width: $vp-768) {
+    background-image: url("../img/item-card-bg-third-mobile.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/item-card-bg-third-mobile@2x.png");
+    }
+  }
+
   @media (min-width: 768px) and (max-width: $vp-1024) {
     background-image: url("../img/item-card-bg-third-tablet.png");
 
@@ -156,6 +209,14 @@
     min-height: 250px;
     height: 100%;
   }
+
+  @media (max-width: $vp-768) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    padding: 26px 29px;
+  }
 }
 
 .promo__list span {
@@ -164,6 +225,10 @@
 
   @media (max-width: $vp-1024) {
     max-width: 150px;
+  }
+
+  @media (max-width: $vp-768) {
+    max-width: 133px;
   }
 }
 
@@ -180,4 +245,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 5px 10px;
+
+  @media (max-width: $vp-768) {
+    width: 40px;
+    height: 40px;
+  }
 }

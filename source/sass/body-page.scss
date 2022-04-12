@@ -14,8 +14,19 @@
     background-size: cover;
     position: absolute;
 
+    @media (max-width: $vp-768) {
+      min-height: 560px;
+      background-color: $color-default-black;
+      background-image: url("../img/header-bg-mobile.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/header-bg-mobile@2x.png");
+      }
+    }
+
     @media (min-width: 768px) and (max-width: $vp-1024) {
       min-height: 640px;
+      background-color: $color-default-black;
       background-image: url("../img/header-bg-tablet.png");
 
       @media (min-resolution: $retina-dppx) {
@@ -25,6 +36,7 @@
 
     @media (min-width: 1024px) {
       min-height: 880px;
+      background-color: $color-default-black;
       background-image: url("../img/header-bg-desktop.png");
 
       @media (min-resolution: $retina-dppx) {

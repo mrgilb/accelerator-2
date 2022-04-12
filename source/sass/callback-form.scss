@@ -56,6 +56,10 @@
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   border: none;
+
+  @media (max-width: $vp-768) {
+    min-width: auto;
+  }
 }
 
 .callback-form input[type="tel"] {
@@ -67,6 +71,10 @@
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   border: none;
+
+  @media (max-width: $vp-768) {
+    min-width: auto;
+  }
 }
 
 .callback-form input[type="text"]::placeholder {

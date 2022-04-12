@@ -1,0 +1,51 @@
+.plus-button {
+  display: none;
+  margin-right: 34px;
+  margin-top: 7px;
+
+  @media (max-width: $vp-768) {
+    padding: 0;
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    right: 0;
+    border: none;
+  }
+}
+
+.plus-button--nojs {
+  display: none;
+}
+
+.plus-button__plus-minus {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #f8fdff;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #f8fdff;
+    transform: rotate(90deg);
+    left: 8px;
+  }
+}
+
+.plus-button__plus-minus--inactive {
+
+  &::before {
+    display: none;
+  }
+}

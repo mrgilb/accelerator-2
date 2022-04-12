@@ -3,6 +3,23 @@
   gap: 15px;
 }
 
+.logo__img {
+  @media (max-width: $vp-768) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.logo__img--footer {
+  @media (max-width: $vp-768) {
+    margin-top: -6px;
+  }
+}
+
 .logo__text {
   margin-top: 5px;
+
+  @media (max-width: $vp-768) {
+    display: none;
+  }
 }

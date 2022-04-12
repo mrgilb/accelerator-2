@@ -9,6 +9,14 @@
     width: 100%;
     min-height: auto;
   }
+
+  @media (max-width: $vp-768) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 110px;
+  }
 }
 
 .socials--margin-right {
@@ -34,6 +42,10 @@
     margin-top: 6px;
     margin-left: 0;
     margin-right: -4px;
+  }
+
+  @media (max-width: $vp-768) {
+    align-self: center;
   }
 }
 
