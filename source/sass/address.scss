@@ -54,19 +54,21 @@
   }
 
   @media (max-width: $vp-768) {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 500ms ease;
   }
 }
 
 .address__list--nojs {
   @media (max-width: $vp-768) {
-    display: grid;
+    max-height: 400px;
   }
 }
 
 .address__list--visible {
   @media(max-width: $vp-768) {
-    display: grid;
+    max-height: 400px;
   }
 }
 

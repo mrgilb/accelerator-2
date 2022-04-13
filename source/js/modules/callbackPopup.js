@@ -22,6 +22,9 @@ if (document.querySelector('.contacts__callback')) {
         const onClickCallbackButton = (evt) => {
           evt.preventDefault();
           body.appendChild(callbackFormContainer);
+          setTimeout(()=> {
+            callbackFormContainer.style.top = '0';
+          }, 300);
           shading.classList.add('shading--active');
           body.style.overflow = 'hidden';
         };
@@ -29,6 +32,7 @@ if (document.querySelector('.contacts__callback')) {
         const onClickKeyDown = (evt) => {
           if (isEscapeKey(evt)) {
             callbackFormContainer.remove();
+            callbackFormContainer.style.top = '-1000px';
             shading.classList.remove('shading--active');
             body.style.overflow = 'auto';
           }
@@ -39,6 +43,7 @@ if (document.querySelector('.contacts__callback')) {
           const onClickCloseButton = (evt) => {
             evt.preventDefault();
             callbackFormContainer.remove();
+            callbackFormContainer.style.top = '-1000px';
             shading.classList.remove('shading--active');
             body.style.overflow = 'auto';
           };

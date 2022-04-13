@@ -14,9 +14,12 @@ if (document.querySelector('.about')) {
         const onClickButtonClose = (evt) => {
           const mobileWidth = 768;
           evt.target.textContent = 'Подробнее';
-          textForTablet.style.display = 'none';
+          textForTablet.style.maxHeight = '0';
+          textForTablet.style.overflow = 'hidden';
           if (window.innerWidth < mobileWidth) {
-            textForMobile.style.display = 'none';
+            textForMobile.style.maxHeight = '0';
+            textForMobile.style.marginBottom = '0';
+            textForMobile.style.overflow = 'hidden';
           }
           evt.target.addEventListener('click', onClickButtonOpen);
         };
@@ -25,8 +28,12 @@ if (document.querySelector('.about')) {
           const mobileWidth = 768;
           evt.target.textContent = 'Свернуть';
           textForTablet.style.display = 'block';
+          textForTablet.style.maxHeight = '800px';
+          textForTablet.style.overflow = 'auto';
           if (window.innerWidth < mobileWidth) {
-            textForMobile.style.display = 'block';
+            textForMobile.style.maxHeight = '800px';
+            textForMobile.style.marginBottom = '20px';
+            textForMobile.style.overflow = 'auto';
           }
           evt.target.removeEventListener('click', onClickButtonOpen);
           evt.target.addEventListener('click', onClickButtonClose);

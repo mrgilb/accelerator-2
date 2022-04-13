@@ -58,8 +58,10 @@
   }
 
   @media (max-width: $vp-768) {
-    margin-top: 22px;
-    display: none;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 500ms ease;
   }
 }
 
@@ -67,12 +69,16 @@
 .main-nav__list--nojs {
   @media (max-width: $vp-768) {
     display: grid;
+    max-height: 400px;
+    margin-top: 22px;
   }
 }
 
 .main-nav__list--visible {
   @media (max-width: $vp-768) {
     display: grid;
+    max-height: 400px;
+    margin-top: 22px;
   }
 }
 
