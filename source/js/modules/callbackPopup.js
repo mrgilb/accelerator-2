@@ -1,4 +1,5 @@
 import {isEscapeKey} from '../utils/isEscape.js';
+import {addFirstSymbols, validationTel} from './validationTel.js';
 
 if (document.querySelector('.contacts__callback')) {
   const buttonCallback = document.querySelector('.contacts__callback');
@@ -7,6 +8,10 @@ if (document.querySelector('.contacts__callback')) {
     const callbackFormTemlate = document.querySelector('#callback').cloneNode(true).content;
     const callbackForm = callbackFormTemlate.cloneNode(true);
     const callbackFormContainer = callbackForm.querySelector('.callback-form');
+    const callbackInputPhobe = callbackForm.querySelector('#callback-phone');
+
+    callbackInputPhobe.addEventListener('click', addFirstSymbols);
+    callbackInputPhobe.addEventListener('input', validationTel);
 
     if (document.querySelector('.body-page')) {
       const body = document.querySelector('.body-page');

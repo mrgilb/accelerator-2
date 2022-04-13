@@ -144,11 +144,6 @@
   color: #ffffff;
   background-color: $color-font-default-black;
   align-self: stretch;
-
-
-  &:focus {
-    outline: 1px solid #ffffff;
-  }
 }
 
 .callback-form input[type="checkbox"] + label {
@@ -210,4 +205,8 @@
   background-size: cover;
   margin-top: 24px;
   margin-right: 24px;
+
+  &:focus {
+    outline: 1px solid #ffffff;
+  }
 }

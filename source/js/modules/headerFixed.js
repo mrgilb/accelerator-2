@@ -7,13 +7,16 @@ if (document.querySelector('.body-page')) {
 
     const onScrollBody = ()=> {
       const scroll = window.scrollY;
+      const desktopWidth = 1024;
 
-      if (scroll > headerHeight) {
-        header.classList.add('page-header--fixed');
-        body.style.paddingTop = headerHeight + 'px';
-      } else {
-        header.classList.remove('page-header--fixed');
-        body.style.paddingTop = 0;
+      if (window.innerWidth >= desktopWidth) {
+        if (scroll > headerHeight) {
+          header.classList.add('page-header--fixed');
+          body.style.paddingTop = headerHeight + 'px';
+        } else {
+          header.classList.remove('page-header--fixed');
+          body.style.paddingTop = 0;
+        }
       }
     };
 
