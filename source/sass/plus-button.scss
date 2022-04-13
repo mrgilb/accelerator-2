@@ -2,6 +2,7 @@
   display: none;
   margin-right: 34px;
   margin-top: 7px;
+  transition: all 500ms ease;
 
   @media (max-width: $vp-768) {
     padding: 0;

@@ -4,9 +4,11 @@
 
 .shading--active {
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: #03101b;
   opacity: 0.7;
+  z-index: 5;
+  top: 0;
 }

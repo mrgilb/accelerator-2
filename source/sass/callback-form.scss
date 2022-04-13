@@ -1,6 +1,7 @@
 .callback-form {
   width: 500px;
   padding: 40px;
+  padding-bottom: 45px;
   box-sizing: border-box;
   align-self: flex-start;
   display: flex;
@@ -10,8 +11,15 @@
   align-items: flex-start;
   background-color: #00b3ff;
   margin: 0 auto;
-  position: relative;
+  position: fixed;
+  z-index: 6;
+  margin: 0 auto;
+  left: 0;
+  right: 17px;
+  top: 0;
+  margin-top: 146px;
 }
+
 
 
 .callback-form h3 {
@@ -30,8 +38,7 @@
   line-height: 22px;
   text-align: left;
   color: #ffffff;
-  margin: 0;
-  margin-bottom: 41px;
+  margin: 0 0 38px;
 }
 
 .callback-form input {
@@ -97,6 +104,7 @@
   min-width: 100%;
   max-height: 155px;
   padding: 25px 15px;
+  padding-top: 22px;
   box-sizing: border-box;
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
@@ -137,15 +145,9 @@
   background-color: $color-font-default-black;
   align-self: stretch;
 
-  &:hover {
-    color: $color-font-default-black;
-    background-color: #ffffff;
-  }
 
   &:focus {
-    outline: none;
-    color: $color-font-default-black;
-    background-color: #ffffff;
+    outline: 1px solid #ffffff;
   }
 }
 
@@ -206,6 +208,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-top: 15px;
-  margin-right: 15px;
+  margin-top: 24px;
+  margin-right: 24px;
 }
