@@ -23,4 +23,3 @@ if (document.querySelector('.body-page')) {
     window.addEventListener('scroll', onScrollBody);
   }
 }
-

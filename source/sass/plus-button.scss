@@ -3,6 +3,7 @@
   margin-right: 34px;
   margin-top: 7px;
   transition: all 500ms ease;
+  z-index: 5;
 
   @media (max-width: $vp-768) {
     padding: 0;
@@ -22,10 +23,11 @@
   }
 }
 
-.plus-button__plus-minus {
+.plus-button span {
   display: block;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 
   &::after {
     content: "";
@@ -33,6 +35,7 @@
     width: 100%;
     height: 1px;
     background-color: #f8fdff;
+    pointer-events: none;
   }
 
   &::before {
@@ -43,10 +46,11 @@
     background-color: #f8fdff;
     transform: rotate(90deg);
     left: 8px;
+    pointer-events: none;
   }
 }
 
-.plus-button__plus-minus--inactive {
+.plus-button--inactive span {
   &::before {
     display: none;
   }
