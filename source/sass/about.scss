@@ -94,6 +94,18 @@
   display: none;
 }
 
+.about--nojs span.about__text-additional-mobile {
+  display: block;
+}
+
+.about--nojs span.about__text-additional-tablet {
+  display: block;
+}
+
+.about--nojs button {
+  display: none;
+}
+
 .about button {
   font-family: $roboto700;
   font-size: 14px;

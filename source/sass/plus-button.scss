@@ -16,7 +16,9 @@
 }
 
 .plus-button--nojs {
-  display: none;
+  @media (max-width: $vp-768) {
+    display: none;
+  }
 }
 
 .plus-button__plus-minus {

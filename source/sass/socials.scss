@@ -20,7 +20,7 @@
 }
 
 .socials--margin-right {
-  margin-right: 162px;
+  margin-right: 13%;
 
   @media (max-width: $vp-1024) {
     margin-right: 0;
@@ -50,6 +50,7 @@
 
 .socials__link {
   transition: all 500ms ease;
+
   &:focus {
     outline: none;
   }
