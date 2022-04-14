@@ -27,6 +27,11 @@
     width: 510px;
     min-height: 285px;
     background-image: url("../img/airplane-desktop.png");
+    background-size: 510px 285px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/airplane-desktop@2x.png");
+    }
     background-repeat: no-repeat;
     position: static;
     z-index: 1;

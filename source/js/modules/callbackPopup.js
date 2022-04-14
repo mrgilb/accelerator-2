@@ -22,11 +22,26 @@ if (document.querySelector('.contacts__callback')) {
         const onClickCallbackButton = (evt) => {
           evt.preventDefault();
           body.appendChild(callbackFormContainer);
+
+          if (callbackFormContainer.querySelector('#firstname-callback')) {
+            const nameField = callbackFormContainer.querySelector('#firstname-callback');
+            nameField.focus();
+          }
+
           setTimeout(()=> {
             callbackFormContainer.style.top = '0';
           }, 300);
           shading.classList.add('shading--active');
           body.style.overflow = 'hidden';
+
+          document.addEventListener('click', (event) => {
+            if (event.target.matches('.shading')) {
+              callbackFormContainer.remove();
+              callbackFormContainer.style.top = '-1000px';
+              shading.classList.remove('shading--active');
+              body.style.overflow = 'auto';
+            }
+          });
         };
 
         const onClickKeyDown = (evt) => {
@@ -50,11 +65,8 @@ if (document.querySelector('.contacts__callback')) {
 
           closeButton.addEventListener('click', onClickCloseButton);
         }
-
         buttonCallback.addEventListener('click', onClickCallbackButton);
         document.addEventListener('keydown', onClickKeyDown);
-
-
       }
     }
   }

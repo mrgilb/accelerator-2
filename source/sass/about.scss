@@ -104,14 +104,17 @@
 
 .about--nojs span.about__text-additional-mobile {
   display: block;
+  max-height: 500px;
 }
 
 .about--nojs span.about__text-additional-tablet {
   display: block;
+  max-height: 500px;
 }
 
 .about--nojs button {
   display: none;
+  max-height: 500px;
 }
 
 .about button {
