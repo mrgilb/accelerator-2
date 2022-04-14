@@ -1,5 +1,5 @@
 .promo {
-  padding: 65px 20px 140px;
+  padding: 65px 20px 110px;
   background-color: $color-default-black;
   min-height: 400px;
 
@@ -73,6 +73,7 @@
   position: relative;
   width: 28.6%;
   min-height: 654px;
+  margin-bottom: 30px;
 
   @media (max-width: $vp-1024) {
     width: 100%;

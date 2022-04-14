@@ -67,7 +67,7 @@
 }
 
 .address__list--visible {
-  @media(max-width: $vp-768) {
+  @media (max-width: $vp-768) {
     max-height: 400px;
   }
 }
