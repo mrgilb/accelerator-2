@@ -1622,6 +1622,20 @@ html {
   padding-bottom: 45px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background-color: #00b3ff;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  right: 17px;
+  top: -1000px;
+  margin-top: 146px;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.callback-form form {
   -ms-flex-item-align: start;
   align-self: flex-start;
   display: -webkit-box;
@@ -1639,17 +1653,6 @@ html {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  background-color: #00b3ff;
-  margin: 0 auto;
-  position: fixed;
-  z-index: 6;
-  left: 0;
-  right: 17px;
-  top: -1000px;
-  margin-top: 146px;
-  -webkit-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
 }
 
 .callback-form h3 {

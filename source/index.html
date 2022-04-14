@@ -154,8 +154,10 @@
       <form action="https://echo.htmlacademy.ru/" id="feedback">
         <h3>Остались вопросы? Задайте их нам!</h3>
         <p>Мы проконсультируем Вас бесплатно</p>
-          <input type="text" placeholder="Имя" name="firstname" required>
+          <input type="text" placeholder="Имя" name="firstname" id="firstname" required>
+          <label for="firstname" class="visually-hidden">Введите имя</label>
           <input type="tel" placeholder="Телефон" name="phone" id="phone" maxlength="14" required>
+          <label for="phone" class="visually-hidden" >Введите номер телефона</label>
         <textarea name="questions" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
         <button>Задать вопрос</button>
         <div class="checkbox">
@@ -248,23 +250,27 @@
     </div>
   </footer>
   <template id="callback">
-    <form action="https://echo.htmlacademy.ru/" class="callback-form">
-      <h3>Закажите звонок</h3>
-      <p>Оставьте контакты, мы проконсультируем <br> вас бесплатно в удобное время</p>
-        <input type="text" placeholder="Имя" name="firstname" required>
-        <input type="tel" placeholder="Телефон" name="phone" id="callback-phone" required maxlength="14">
-      <textarea name="questions" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
-      <button class="callback__submit">Отправить</button>
-      <div class="checkbox">
-        <input type="checkbox" id="checkbox-popup" class="visually-hidden" required>
-        <label for="checkbox-popup">Я согласен на обработку персональных данных</label>
-      </div>
-      <button class="callback-form__close">
-        <span class="visually-hidden">
-          Закрыть
-        </span>
-      </button>
-    </form>
+    <div class="callback-form">
+      <form action="https://echo.htmlacademy.ru/">
+        <h3>Закажите звонок</h3>
+        <p>Оставьте контакты, мы проконсультируем <br> вас бесплатно в удобное время</p>
+          <input type="text" placeholder="Имя" name="firstname" id="firstname-callback" required>
+          <label for="firstname-callback" class="visually-hidden">Введите ваше имя</label>
+          <input type="tel" placeholder="Телефон" name="phone" id="callback-phone" required maxlength="14">
+          <label for="callback-phone" class="visually-hidden">Введите номер телефона</label>
+        <textarea name="questions" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
+        <button class="callback__submit">Отправить</button>
+        <div class="checkbox">
+          <input type="checkbox" id="checkbox-popup" class="visually-hidden" required>
+          <label for="checkbox-popup">Я согласен на обработку персональных данных</label>
+        </div>
+        <button class="callback-form__close">
+          <span class="visually-hidden">
+            Закрыть
+          </span>
+        </button>
+      </form>
+    </div>
   </template>
   <script src="./js/main.min.js" type="module" async></script>
 </body>
