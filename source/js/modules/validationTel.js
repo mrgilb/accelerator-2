@@ -39,5 +39,6 @@ if (document.querySelector('#phone')) {
   const phoneInput = document.querySelector('#phone');
 
   phoneInput.addEventListener('click', addFirstSymbols);
+  phoneInput.addEventListener('focus', addFirstSymbols);
   phoneInput.addEventListener('input', validationTel);
 }

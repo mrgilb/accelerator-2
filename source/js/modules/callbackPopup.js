@@ -1,4 +1,5 @@
 import {isEscapeKey} from '../utils/isEscape.js';
+import {isTab} from '../utils/isTab.js';
 import {addFirstSymbols, validationTel} from './validationTel.js';
 
 if (document.querySelector('.contacts__callback')) {
@@ -26,6 +27,21 @@ if (document.querySelector('.contacts__callback')) {
           if (callbackFormContainer.querySelector('#firstname-callback')) {
             const nameField = callbackFormContainer.querySelector('#firstname-callback');
             nameField.focus();
+
+            document.addEventListener('keydown', (event) => {
+              if (isTab(event)) {
+                if (event.shiftKey) {
+                  if (event.target === nameField) {
+
+                    if (callbackFormContainer.querySelector('.callback-form__close')) {
+                      const closeButton = callbackFormContainer.querySelector('.callback-form__close');
+
+                      closeButton.focus();
+                    }
+                  }
+                }
+              }
+            });
           }
 
           setTimeout(()=> {
