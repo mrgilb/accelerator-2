@@ -2031,15 +2031,15 @@ html {
   }
 
   .promo__item-bg-first {
-    background-image: url("../img/item-card-bg-fisrt.png");
+    background-image: url("../img/item-card-bg-fisrt.webp");
   }
 
   .promo__item-bg-second {
-    background-image: url("../img/item-card-bg-second.png");
+    background-image: url("../img/item-card-bg-second.webp");
   }
 
   .promo__item-bg-third {
-    background-image: url("../img/item-card-bg-third.png");
+    background-image: url("../img/item-card-bg-third.webp");
   }
 }
 
@@ -2049,15 +2049,15 @@ html {
   }
 
   .promo__item-bg-first {
-    background-image: url("../img/item-card-bg-fisrt@2x.png");
+    background-image: url("../img/item-card-bg-fisrt@2x.webp");
   }
 
   .promo__item-bg-second {
-    background-image: url("../img/item-card-bg-second@2x.png");
+    background-image: url("../img/item-card-bg-second@2x.webp");
   }
 
   .promo__item-bg-third {
-    background-image: url("../img/item-card-bg-third@2x.png");
+    background-image: url("../img/item-card-bg-third@2x.webp");
   }
 }
 
@@ -2338,7 +2338,7 @@ html {
   .body-page::after {
     min-height: 560px;
     background-color: #041827;
-    background-image: url("../img/header-bg-mobile.png");
+    background-image: url("../img/header-bg-mobile.webp");
   }
 
   .page-header {
@@ -2746,7 +2746,7 @@ html {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .body-page::after {
-    background-image: url("../img/header-bg-mobile@2x.png");
+    background-image: url("../img/header-bg-mobile@2x.webp");
   }
 }
 
@@ -2758,15 +2758,15 @@ html {
   }
 
   .promo__item-bg-first {
-    background-image: url("../img/item-card-bg-fisrt-tablet.png");
+    background-image: url("../img/item-card-bg-fisrt-tablet.webp");
   }
 
   .promo__item-bg-second {
-    background-image: url("../img/item-card-bg-second-tablet.png");
+    background-image: url("../img/item-card-bg-second-tablet.webp");
   }
 
   .promo__item-bg-third {
-    background-image: url("../img/item-card-bg-third-tablet.png");
+    background-image: url("../img/item-card-bg-third-tablet.webp");
   }
 }
 
@@ -2776,15 +2776,15 @@ html {
   }
 
   .promo__item-bg-first {
-    background-image: url("../img/item-card-bg-fisrt-tablet@2x.png");
+    background-image: url("../img/item-card-bg-fisrt-tablet@2x.webp");
   }
 
   .promo__item-bg-second {
-    background-image: url("../img/item-card-bg-second-tablet@2x.png");
+    background-image: url("../img/item-card-bg-second-tablet@2x.webp");
   }
 
   .promo__item-bg-third {
-    background-image: url("../img/item-card-bg-third-tablet@2x.png");
+    background-image: url("../img/item-card-bg-third-tablet@2x.webp");
   }
 }
 
@@ -2796,29 +2796,29 @@ html {
 
 @media (min-width: 0) and (max-width: 767px) {
   .promo__item-bg-first {
-    background-image: url("../img/item-card-bg-fisrt-mobile.png");
+    background-image: url("../img/item-card-bg-fisrt-mobile.webp");
   }
 
   .promo__item-bg-second {
-    background-image: url("../img/item-card-bg-second-mobile.png");
+    background-image: url("../img/item-card-bg-second-mobile.webp");
   }
 
   .promo__item-bg-third {
-    background-image: url("../img/item-card-bg-third-mobile.png");
+    background-image: url("../img/item-card-bg-third-mobile.webp");
   }
 }
 
 @media (min-width: 0) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 0) and (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 0) and (max-width: 767px) and (min-resolution: 2dppx) {
   .promo__item-bg-first {
-    background-image: url("../img/item-card-bg-fisrt-mobile@2x.png");
+    background-image: url("../img/item-card-bg-fisrt-mobile@2x.webp");
   }
 
   .promo__item-bg-second {
-    background-image: url("../img/item-card-bg-second-mobile@2x.png");
+    background-image: url("../img/item-card-bg-second-mobile@2x.webp");
   }
 
   .promo__item-bg-third {
-    background-image: url("../img/item-card-bg-third-mobile@2x.png");
+    background-image: url("../img/item-card-bg-third-mobile@2x.webp");
   }
 }
 

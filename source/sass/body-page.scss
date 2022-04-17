@@ -18,10 +18,10 @@
     @media (max-width: $vp-768) {
       min-height: 560px;
       background-color: $color-default-black;
-      background-image: url("../img/header-bg-mobile.png");
+      background-image: url("../img/header-bg-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/header-bg-mobile@2x.png");
+        background-image: url("../img/header-bg-mobile@2x.webp");
       }
     }
 
