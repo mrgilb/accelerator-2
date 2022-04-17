@@ -18,6 +18,26 @@
     right: 0;
     border: none;
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover span::after {
+    background-color: #87ceeb;
+  }
+
+  &:hover span::before {
+    background-color: #87ceeb;
+  }
+
+  &:focus span::after {
+    background-color: #87ceeb;
+  }
+
+  &:focus span::before {
+    background-color: #87ceeb;
+  }
 }
 
 .plus-button--nojs {

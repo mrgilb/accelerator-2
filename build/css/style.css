@@ -1589,6 +1589,26 @@ html {
   z-index: 5;
 }
 
+.plus-button:focus {
+  outline: none;
+}
+
+.plus-button:hover span::after {
+  background-color: #87ceeb;
+}
+
+.plus-button:hover span::before {
+  background-color: #87ceeb;
+}
+
+.plus-button:focus span::after {
+  background-color: #87ceeb;
+}
+
+.plus-button:focus span::before {
+  background-color: #87ceeb;
+}
+
 .plus-button span {
   display: block;
   width: 100%;
@@ -2655,6 +2675,7 @@ html {
   .main-nav__list {
     margin-top: 0;
     max-height: 0;
+    display: none;
     overflow: hidden;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -2669,8 +2690,6 @@ html {
   }
 
   .main-nav__list--visible {
-    display: -ms-grid;
-    display: grid;
     max-height: 400px;
     margin-top: 22px;
   }
@@ -2695,6 +2714,7 @@ html {
   .address__list {
     max-height: 0;
     overflow: hidden;
+    display: none;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;

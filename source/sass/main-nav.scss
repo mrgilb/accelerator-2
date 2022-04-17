@@ -60,6 +60,7 @@
   @media (max-width: $vp-768) {
     margin-top: 0;
     max-height: 0;
+    display: none;
     overflow: hidden;
     transition: all 500ms ease;
   }
@@ -76,7 +77,6 @@
 
 .main-nav__list--visible {
   @media (max-width: $vp-768) {
-    display: grid;
     max-height: 400px;
     margin-top: 22px;
   }

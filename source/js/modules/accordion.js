@@ -35,7 +35,10 @@ if (document.querySelector('.page-footer')) {
                     }
                   });
                   evt.target.classList.toggle('plus-button--inactive');
-                  mainNavList.classList.toggle('main-nav__list--visible');
+                  mainNavList.style.display = 'grid';
+                  setTimeout(()=> {
+                    mainNavList.classList.toggle('main-nav__list--visible');
+                  }, 100);
                   if (addressList.classList.contains('address__list--visible')) {
                     addressList.classList.remove('address__list--visible');
                   }
@@ -49,7 +52,10 @@ if (document.querySelector('.page-footer')) {
                     }
                   });
                   evt.target.classList.toggle('plus-button--inactive');
-                  addressList.classList.toggle('address__list--visible');
+                  addressList.style.display = 'grid';
+                  setTimeout(()=> {
+                    addressList.classList.toggle('address__list--visible');
+                  }, 100);
                   if (mainNavList.classList.contains('main-nav__list--visible')) {
                     mainNavList.classList.remove('main-nav__list--visible');
                   }
