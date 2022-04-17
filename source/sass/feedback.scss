@@ -269,6 +269,10 @@
     background-color: #ffffff;
   }
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   @media (max-width: $vp-1024) {
     padding: 13px 70px;
   }

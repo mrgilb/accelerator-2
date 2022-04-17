@@ -152,6 +152,10 @@
 .callback-form .callback__submit {
   transition: all 500ms ease;
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &:hover {
     outline: none;
     color: $color-default-black;

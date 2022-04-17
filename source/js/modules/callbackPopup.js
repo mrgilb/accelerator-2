@@ -12,7 +12,12 @@ if (document.querySelector('.contacts__callback')) {
     const callbackInputPhobe = callbackForm.querySelector('#callback-phone');
 
     callbackInputPhobe.addEventListener('click', addFirstSymbols);
-    callbackInputPhobe.addEventListener('input', validationTel);
+    callbackInputPhobe.addEventListener('input', (event) => {
+      if (callbackFormContainer.querySelector('.callback__submit')) {
+        const submitButton = callbackFormContainer.querySelector('.callback__submit');
+        validationTel(event, submitButton);
+      }
+    });
 
     if (document.querySelector('.body-page')) {
       const body = document.querySelector('.body-page');

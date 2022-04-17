@@ -1304,6 +1304,10 @@ html {
   background-color: #ffffff;
 }
 
+.feedback form button:disabled {
+  opacity: 0.3;
+}
+
 .feedback form input[type="checkbox"] + label {
   font-size: 14px;
   font-weight: 400;
@@ -1914,6 +1918,10 @@ html {
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+
+.callback-form .callback__submit:disabled {
+  opacity: 0.3;
 }
 
 .callback-form .callback__submit:hover {

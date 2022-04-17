@@ -11,7 +11,7 @@ const deleteLastSymbol = (evt) => {
   }
 };
 
-export const validationTel = (evt) => {
+export const validationTel = (evt, disabledButton) => {
   if (!evt.target.value.startsWith(fisrtSymbolPhone)) {
     evt.target.setCustomValidity(`Номер телефона должен начинаться с ${fisrtSymbolPhone}`);
   }
@@ -27,6 +27,10 @@ export const validationTel = (evt) => {
 
   if (!regexp.test(evt.target.value)) {
     evt.target.setCustomValidity('Номер телефона должен быть введен в формате +7(999)9999999');
+    disabledButton.setAttribute('disabled', 'disabled');
+  } else {
+    evt.target.setCustomValidity('');
+    disabledButton.removeAttribute('disabled');
   }
   evt.target.reportValidity();
 };
@@ -37,8 +41,13 @@ export const addFirstSymbols = (evt) => {
 
 if (document.querySelector('#phone')) {
   const phoneInput = document.querySelector('#phone');
+  if (document.querySelector('.feedback__button')) {
+    const submitFrom = document.querySelector('.feedback__button');
+    phoneInput.addEventListener('input', (event) => {
+      validationTel(event, submitFrom);
+    });
+  }
 
   phoneInput.addEventListener('click', addFirstSymbols);
   phoneInput.addEventListener('focus', addFirstSymbols);
-  phoneInput.addEventListener('input', validationTel);
 }
