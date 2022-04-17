@@ -11,13 +11,21 @@ if (document.querySelector('.contacts__callback')) {
     const callbackFormContainer = callbackForm.querySelector('.callback-form');
     const callbackInputPhobe = callbackForm.querySelector('#callback-phone');
 
-    callbackInputPhobe.addEventListener('click', addFirstSymbols);
-    callbackInputPhobe.addEventListener('input', (event) => {
-      if (callbackFormContainer.querySelector('.callback__submit')) {
-        const submitButton = callbackFormContainer.querySelector('.callback__submit');
+    if (callbackFormContainer.querySelector('.callback__submit')) {
+      const submitButton = callbackFormContainer.querySelector('.callback__submit');
+
+      callbackInputPhobe.addEventListener('click', (event)=> {
+        addFirstSymbols(event);
+        submitButton.setAttribute('disabled', 'disabled');
+      });
+      callbackInputPhobe.addEventListener('focus', (event)=> {
+        addFirstSymbols(event);
+        submitButton.setAttribute('disabled', 'disabled');
+      });
+      callbackInputPhobe.addEventListener('input', (event) => {
         validationTel(event, submitButton);
-      }
-    });
+      });
+    }
 
     if (document.querySelector('.body-page')) {
       const body = document.querySelector('.body-page');

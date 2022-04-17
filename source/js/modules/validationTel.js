@@ -46,8 +46,15 @@ if (document.querySelector('#phone')) {
     phoneInput.addEventListener('input', (event) => {
       validationTel(event, submitFrom);
     });
-  }
 
-  phoneInput.addEventListener('click', addFirstSymbols);
-  phoneInput.addEventListener('focus', addFirstSymbols);
+    phoneInput.addEventListener('click', (event) => {
+      addFirstSymbols(event);
+      submitFrom.setAttribute('disabled', 'disabled');
+    });
+
+    phoneInput.addEventListener('focus', (event) => {
+      addFirstSymbols(event);
+      submitFrom.setAttribute('disabled', 'disabled');
+    });
+  }
 }
