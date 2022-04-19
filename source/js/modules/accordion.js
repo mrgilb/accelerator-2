@@ -35,7 +35,7 @@ if (document.querySelector('.page-footer')) {
                     }
                   });
                   evt.target.classList.toggle('plus-button--inactive');
-                  mainNavList.style.display = 'grid';
+                  mainNavList.style.display = 'block';
                   setTimeout(()=> {
                     mainNavList.classList.toggle('main-nav__list--visible');
                   }, 100);

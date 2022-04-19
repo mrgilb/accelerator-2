@@ -5,7 +5,7 @@
   box-sizing: border-box;
   background-color: #00b3ff;
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
   z-index: 6;
   left: 0;
   right: 17px;
@@ -16,11 +16,7 @@
 
 .callback-form form {
   align-self: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: grid;
 }
 
 .callback-form h3 {
@@ -147,6 +143,7 @@
   color: #ffffff;
   background-color: $color-font-default-black;
   align-self: stretch;
+  grid-row: 6/7;
 }
 
 .callback-form .callback__submit {
@@ -180,6 +177,8 @@
   padding-left: 35px;
   position: relative;
   transition: all 500ms ease;
+  grid-row: 7/8;
+  user-select: none;
 
   &:hover {
     color: $color-font-default-black;

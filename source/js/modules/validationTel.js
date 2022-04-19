@@ -2,7 +2,12 @@ import {isBackspace} from '../utils/isBackspace.js';
 
 const regexp = /\+7\(\d{3}\)\d{3}\d{2}\d{2}/;
 const fisrtSymbolPhone = '+7';
-const bracket = ')';
+const reverseBracket = ')';
+const bracket = '(';
+
+export const getOnlyNumbers = (event) => {
+  event.target.value = event.target.value.replace(/[^/\+7\(\d{3}\)\d{3}\d{2}\d{2}/]/g, '');
+};
 
 const deleteLastSymbol = (evt) => {
   if (isBackspace(evt)) {
@@ -20,8 +25,13 @@ export const validationTel = (evt, disabledButton) => {
     evt.target.setCustomValidity('');
   }
 
-  if (evt.target.value.length === 6) {
+  if (evt.target.value.length === 2) {
     evt.target.value = evt.target.value.concat(bracket);
+    document.addEventListener('keydown', deleteLastSymbol);
+  }
+
+  if (evt.target.value.length === 6) {
+    evt.target.value = evt.target.value.concat(reverseBracket);
     document.addEventListener('keydown', deleteLastSymbol);
   }
 
@@ -56,5 +66,7 @@ if (document.querySelector('#phone')) {
       addFirstSymbols(event);
       submitFrom.setAttribute('disabled', 'disabled');
     });
+
+    phoneInput.addEventListener('keyup', getOnlyNumbers);
   }
 }

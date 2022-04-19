@@ -56,7 +56,6 @@
   margin: 0 auto;
   margin-top: 50px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   @media (max-width: $vp-1024) {
@@ -74,6 +73,11 @@
   width: 28.6%;
   min-height: 654px;
   margin-bottom: 30px;
+  margin-right: 7%;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 
   @media (max-width: $vp-1024) {
     width: 100%;

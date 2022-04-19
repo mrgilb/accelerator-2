@@ -20,8 +20,10 @@
 }
 
 .page-header--fixed {
-  position: fixed;
-  top: 0;
+  @media (min-width: 1024px) {
+    position: fixed;
+    top: 0;
+  }
 }
 
 .page-header__wrapper {
@@ -34,6 +36,7 @@
   gap: 152px;
 
   @media (max-width: $vp-1024) {
+    justify-content: space-between;
     padding: 0 50px;
   }
 

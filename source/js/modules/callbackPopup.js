@@ -35,11 +35,19 @@ if (document.querySelector('.contacts__callback')) {
 
         const onClickCallbackButton = (evt) => {
           evt.preventDefault();
-          body.appendChild(callbackFormContainer);
 
+          body.appendChild(callbackFormContainer);
           if (callbackFormContainer.querySelector('#firstname-callback')) {
             const nameField = callbackFormContainer.querySelector('#firstname-callback');
             nameField.focus();
+
+            window.addEventListener('wheel', (event) => {
+              if (event.deltaY > 0) {
+                callbackFormContainer.style.top = `${parseInt(callbackFormContainer.style.top, 10) - 40 }px`;
+              } else {
+                callbackFormContainer.style.top = `${parseInt(callbackFormContainer.style.top, 10) + 40 }px`;
+              }
+            });
 
             document.addEventListener('keydown', (event) => {
               if (isTab(event)) {
@@ -61,14 +69,14 @@ if (document.querySelector('.contacts__callback')) {
             callbackFormContainer.style.top = '0';
           }, 300);
           shading.classList.add('shading--active');
-          body.style.overflow = 'hidden';
+          body.style.position = 'fixed';
 
           document.addEventListener('click', (event) => {
             if (event.target.matches('.shading')) {
               callbackFormContainer.remove();
               callbackFormContainer.style.top = '-1000px';
               shading.classList.remove('shading--active');
-              body.style.overflow = 'auto';
+              body.style.position = 'static';
             }
           });
         };
@@ -78,7 +86,7 @@ if (document.querySelector('.contacts__callback')) {
             callbackFormContainer.remove();
             callbackFormContainer.style.top = '-1000px';
             shading.classList.remove('shading--active');
-            body.style.overflow = 'auto';
+            body.style.position = 'static';
           }
         };
         if (callbackForm.querySelector('.callback-form__close')) {
@@ -89,7 +97,7 @@ if (document.querySelector('.contacts__callback')) {
             callbackFormContainer.remove();
             callbackFormContainer.style.top = '-1000px';
             shading.classList.remove('shading--active');
-            body.style.overflow = 'auto';
+            body.style.position = 'static';
           };
 
           closeButton.addEventListener('click', onClickCloseButton);

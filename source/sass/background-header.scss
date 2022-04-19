@@ -1,0 +1,45 @@
+.background-header {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+    @media (max-width: $vp-768) {
+      min-height: 560px;
+      background-color: $color-default-black;
+      background-image: url("../img/header-bg-mobile.webp");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/header-bg-mobile@2x.webp");
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: $vp-1024) {
+      min-height: 640px;
+      background-color: $color-default-black;
+      background-image: url("../img/header-bg-tablet.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/header-bg-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: 1024px) {
+      min-height: 880px;
+      height: 100%;
+      background-color: $color-default-black;
+      background-image: url("../img/header-bg-desktop.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/header-bg-desktop@2x.png");
+      }
+    }
+  }
+}

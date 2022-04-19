@@ -1,5 +1,5 @@
-if (document.querySelector('.body-page')) {
-  const body = document.querySelector('.body-page');
+if (document.querySelector('.background-header')) {
+  const background = document.querySelector('.background-header');
 
   if (document.querySelector('.page-header')) {
     const header = document.querySelector('.page-header');
@@ -12,10 +12,10 @@ if (document.querySelector('.body-page')) {
       if (window.innerWidth >= desktopWidth) {
         if (scroll > headerHeight) {
           header.classList.add('page-header--fixed');
-          body.style.paddingTop = headerHeight + 'px';
+          background.style.paddingTop = headerHeight + 'px';
         } else {
           header.classList.remove('page-header--fixed');
-          body.style.paddingTop = 0;
+          background.style.paddingTop = 0;
         }
       }
     };
