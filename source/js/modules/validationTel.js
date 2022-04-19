@@ -2,6 +2,7 @@ import {isBackspace} from '../utils/isBackspace.js';
 
 const regexp = /\+7\(\d{3}\)\d{3}\d{2}\d{2}/;
 const fisrtSymbolPhone = '+7';
+const fisrtSymbolsPhone = '+7(';
 const reverseBracket = ')';
 const bracket = '(';
 
@@ -19,6 +20,9 @@ const deleteLastSymbol = (evt) => {
 export const validationTel = (evt, disabledButton) => {
   if (!evt.target.value.startsWith(fisrtSymbolPhone)) {
     evt.target.setCustomValidity(`Номер телефона должен начинаться с ${fisrtSymbolPhone}`);
+  }
+  if (evt.target.value.length < 2) {
+    evt.target.value = fisrtSymbolsPhone.concat(evt.target.value);
   }
 
   if (evt.target.value.startsWith(fisrtSymbolPhone)) {
