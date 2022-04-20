@@ -2127,6 +2127,14 @@ html {
   }
 }
 
+@media (max-width: 1200px) {
+  .main-nav__list {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
 @media (max-width: 1155px) {
   .contacts__container a {
     margin-right: 0;

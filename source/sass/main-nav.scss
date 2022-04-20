@@ -44,6 +44,9 @@
   column-count: 2;
   gap: 157px;
 
+  @media (max-width: 1200px) {
+    column-count: 1;
+  }
 
   @media (max-width: $vp-1024) {
     column-count: 1;
