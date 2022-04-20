@@ -9,18 +9,20 @@ const bracket = '(';
 
 export const getOnlyNumbers = (event) => {
   if (event.target.matches('.tel')) {
-
-    if (!event.key === 'undefined') {
+    if (event.key) {
       const symbol = event.key.toString();
+
       if (event.key === 'Tab') {
         return;
       }
-      if (!regexpNumbers.test(symbol.toString())) {
+      if (!regexpNumbers.test(symbol)) {
         event.preventDefault();
       }
     }
   }
 };
+
+document.addEventListener('keydown', getOnlyNumbers);
 
 const deleteLastSymbol = (evt) => {
   if (document.querySelectorAll('.submit')) {
@@ -92,7 +94,5 @@ if (document.querySelector('#phone')) {
       addFirstSymbols(event);
       submitFrom.setAttribute('disabled', 'disabled');
     });
-
-    document.addEventListener('keydown', getOnlyNumbers);
   }
 }
