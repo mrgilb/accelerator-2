@@ -1,19 +1,41 @@
 import {isBackspace} from '../utils/isBackspace.js';
 
 const regexp = /\+7\(\d{3}\)\d{3}\d{2}\d{2}/;
+const regexpNumbers = /^\d/;
 const fisrtSymbolPhone = '+7';
 const fisrtSymbolsPhone = '+7(';
 const reverseBracket = ')';
 const bracket = '(';
 
 export const getOnlyNumbers = (event) => {
-  event.target.value = event.target.value.replace(/[^/\+7\(\d{3}\)\d{3}\d{2}\d{2}/]/g, '');
+  if (event.target.matches('.tel')) {
+
+    if (!event.key === 'undefined') {
+      const symbol = event.key.toString();
+      if (event.key === 'Tab') {
+        return;
+      }
+      if (!regexpNumbers.test(symbol.toString())) {
+        event.preventDefault();
+      }
+    }
+  }
 };
 
 const deleteLastSymbol = (evt) => {
-  if (isBackspace(evt)) {
-    evt.preventDefault();
-    evt.target.value = evt.target.value.slice(0, -1);
+  if (document.querySelectorAll('.submit')) {
+    const buttons = document.querySelectorAll('.submit');
+    if (isBackspace(evt)) {
+      evt.preventDefault();
+      evt.target.value = evt.target.value.slice(0, -1);
+
+      if (!regexp.test(evt.target.value)) {
+        evt.target.setCustomValidity('Номер телефона должен быть введен в формате +7(999)9999999');
+        buttons.forEach((button) => {
+          button.setAttribute('disabled', 'disabled');
+        });
+      }
+    }
   }
 };
 
@@ -71,6 +93,6 @@ if (document.querySelector('#phone')) {
       submitFrom.setAttribute('disabled', 'disabled');
     });
 
-    phoneInput.addEventListener('keyup', getOnlyNumbers);
+    document.addEventListener('keydown', getOnlyNumbers);
   }
 }

@@ -161,14 +161,14 @@
           <p>Мы проконсультируем Вас бесплатно</p>
             <input type="text" placeholder="Имя" name="firstname" id="firstname" required>
             <label for="firstname" class="visually-hidden">Введите имя</label>
-            <input class="tel" type="tel" placeholder="Телефон" name="phone" id="phone" maxlength="14" required>
+            <input class="tel" type="tel" placeholder="Телефон" name="phone" id="phone" minlength="14" maxlength="14" required>
             <label for="phone" class="visually-hidden">Введите номер телефона</label>
           <textarea name="questions" cols="30" rows="10" placeholder="Ваш вопрос" required id="feedback-textarea"></textarea>
           <div class="checkbox">
             <input type="checkbox" class="visually-hidden" id="checkbox" required>
             <label for="checkbox">Я согласен на обработку<br> персональных данных</label>
           </div>
-          <button class="feedback__button">Задать вопрос</button>
+          <button class="feedback__button submit">Задать вопрос</button>
         </form>
       </div>
     </section>
@@ -272,7 +272,7 @@
             <input type="checkbox" id="checkbox-popup" class="visually-hidden" required>
             <label for="checkbox-popup">Я согласен на обработку персональных данных</label>
           </div>
-          <button class="callback__submit">Отправить</button>
+          <button class="callback__submit submit">Отправить</button>
           <button class="callback-form__close">
             <span class="visually-hidden">
               Закрыть
