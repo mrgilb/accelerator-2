@@ -14,11 +14,11 @@ if (document.querySelector('.contacts__callback')) {
     if (callbackFormContainer.querySelector('.callback__submit')) {
       const submitButton = callbackFormContainer.querySelector('.callback__submit');
 
-      callbackInputPhobe.addEventListener('click', (event)=> {
+      callbackInputPhobe.addEventListener('click', (event) => {
         addFirstSymbols(event);
         submitButton.setAttribute('disabled', 'disabled');
       });
-      callbackInputPhobe.addEventListener('focus', (event)=> {
+      callbackInputPhobe.addEventListener('focus', (event) => {
         addFirstSymbols(event);
         submitButton.setAttribute('disabled', 'disabled');
       });
@@ -41,11 +41,37 @@ if (document.querySelector('.contacts__callback')) {
             const nameField = callbackFormContainer.querySelector('#firstname-callback');
             nameField.focus();
 
-            window.addEventListener('wheel', (event) => {
+            const scrolledPopup = (event) => {
               if (event.deltaY > 0) {
-                callbackFormContainer.style.top = `${parseInt(callbackFormContainer.style.top, 10) - 40 }px`;
+                callbackFormContainer.style.top = `${parseInt(callbackFormContainer.style.top, 10) - 40}px`;
               } else {
-                callbackFormContainer.style.top = `${parseInt(callbackFormContainer.style.top, 10) + 40 }px`;
+                callbackFormContainer.style.top = `${parseInt(callbackFormContainer.style.top, 10) + 40}px`;
+              }
+            };
+
+            window.addEventListener('wheel', scrolledPopup);
+
+            if (window.innerHeight === parseInt(window.getComputedStyle(callbackFormContainer, null).height, 10) || window.innerHeight > parseInt(window.getComputedStyle(callbackFormContainer, null).height, 10)) {
+              window.removeEventListener('wheel', scrolledPopup);
+              callbackFormContainer.style.top = '0';
+              callbackFormContainer.style.marginTop = '146px';
+            }
+
+            window.addEventListener('resize', () => {
+              if (window.innerHeight === parseInt(window.getComputedStyle(callbackFormContainer, null).height, 10)) {
+                callbackFormContainer.style.top = '0';
+                callbackFormContainer.style.marginTop = '0';
+                window.removeEventListener('wheel', scrolledPopup);
+              }
+              if (window.innerHeight < parseInt(window.getComputedStyle(callbackFormContainer, null).height, 10)) {
+                window.addEventListener('wheel', scrolledPopup);
+              }
+              if (window.innerHeight > parseInt(window.getComputedStyle(callbackFormContainer, null).height, 10)) {
+                window.removeEventListener('wheel', scrolledPopup);
+                callbackFormContainer.style.top = '0';
+                if (window.innerHeight - parseInt(window.getComputedStyle(callbackFormContainer, null).height, 10) < 146) {
+                  callbackFormContainer.style.marginTop = `${window.innerHeight - parseInt(window.getComputedStyle(callbackFormContainer, null).height, 10)}px`;
+                }
               }
             });
 
@@ -65,7 +91,7 @@ if (document.querySelector('.contacts__callback')) {
             });
           }
 
-          setTimeout(()=> {
+          setTimeout(() => {
             callbackFormContainer.style.top = '0';
           }, 300);
           shading.classList.add('shading--active');
